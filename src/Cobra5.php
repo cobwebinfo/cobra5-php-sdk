@@ -5,7 +5,7 @@ use CobwebInfo\Cobra5Sdk\Entity\Document;
 use CobwebInfo\Cobra5Sdk\Entity\Category;
 use CobwebInfo\Cobra5Sdk\Entity\Datastore;
 
-class Cobra5 implements Cobra5Interface{
+class Cobra5 implements Cobra5Interface {
 
   /**
    * The client instance
