@@ -1,12 +1,12 @@
 # COBRA5 PHP SDK
 
-The COBRA5 API is a collection of resources for retrieving content from the [Cobweb Information Ltd](http://www.cobwebinfomation.com) content API.
+The COBRA5 API is a collection of resources for retrieving content from the [Cobweb Information Ltd](http://www.cobwebinfo.com) content API.
 
 This repository contains the open source PHP SDK for integrating the COBRA5 API into your PHP application. The COBRA5 PHP SDK is licensed under the MIT license.
 
 This package requires PHP `>= 5.4.0`.
 
-In order to gain access to the COBRA5 API, you will require an API Key that will be issued by [Cobweb Information Ltd](http://www.cobwebinfomation.com). You will also receive complete documentation on each of the resources of the COBRA5 API, as well as example requests and responses.
+In order to gain access to the COBRA5 API, you will require an API Key that will be issued by [Cobweb Information Ltd](http://www.cobwebinfo.com). You will also receive complete documentation on each of the resources of the COBRA5 API, as well as example requests and responses.
 
 ## Installation
 Add `cobwebinfo/cobra5-php-sdk` as a requirement to `composer.json`:
