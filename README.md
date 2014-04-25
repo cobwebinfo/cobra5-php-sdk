@@ -1,5 +1,7 @@
 # COBRA5 PHP SDK
 
+[![Build Status](https://travis-ci.org/cobwebinfo/cobra5-php-sdk.svg?branch=master)](https://travis-ci.org/cobwebinfo/cobra5-php-sdk)
+
 The COBRA5 API is a collection of resources for retrieving content from the [Cobweb Information Ltd](http://www.cobwebinfomation.com) content API.
 
 This repository contains the open source PHP SDK for integrating the COBRA5 API into your PHP application. The COBRA5 PHP SDK is licensed under the MIT license.
