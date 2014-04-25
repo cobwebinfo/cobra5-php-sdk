@@ -132,7 +132,7 @@ $cobra5->documentSearch('business', 0, 10);
 The `documentSearch()` method will allow you to search the API for a particular term. You will be returned a `Illuminate\Support\Collection` of results.
 
 ## Errors and Exceptions
-If a problem occurs whilst using the COBRA5 API a new `SoapFault` exception will be thrown. This exception can be caught and dealt with gracefully withing your application:
+If a problem occurs whilst using the COBRA5 API a `SoapFault` exception will be thrown. This exception can be caught and dealt with gracefully within your application:
 ```php
 try
 {
