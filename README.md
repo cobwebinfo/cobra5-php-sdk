@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/cobwebinfo/cobra5-php-sdk.svg?branch=master)](https://travis-ci.org/cobwebinfo/cobra5-php-sdk)
 
-The COBRA5 API is a collection of resources for retrieving content from the [Cobweb Information Ltd](http://www.cobwebinfo.com) content API.
+The COBRA5 API can be used to retrieve content from the [Cobweb Information Ltd](http://www.cobwebinfo.com) content API.
 
 This repository contains the open source PHP SDK for integrating the COBRA5 API into your PHP application. The COBRA5 PHP SDK is licensed under the MIT license.
 
@@ -33,17 +33,23 @@ $soap = new SoapClient('http://api.cobwebinfo.com/server/soap?wsdl');
 
 Next, create a new `SoapApiKeyAuthentication` object and pass the name of the `SoapHeader` and your `api_key` as arguments:
 ```php
-$auth = new CobwebInfo\Cobra5Sdk\Authentication\SoapApiKeyAuthentication('Auth', 'api_key');
+use CobwebInfo\Cobra5Sdk\Authentication\SoapApiKeyAuthentication;
+
+$auth = new SoapApiKeyAuthentication('Auth', 'api_key');
 ```
 
 Next, create a new `Cobra5SoapClient` and pass the `SoapClient` and `SoapApiKeyAuthentication` objects as arguments:
 ```php
-$client = new CobwebInfo\Cobra5Sdk\Client\Cobra5SoapClient($soap, $auth);
+use CobwebInfo\Cobra5Sdk\Client\Cobra5SoapClient;
+
+$client = new Cobra5SoapClient($soap, $auth);
 ```
 
 Finally, create a new instance of `Cobra5` and pass the `Cobra5SoapClient` object as the argument:
 ```php
-$cobra5 = new CobwebInfo\Cobra5Sdk\Cobra5($client);
+use CobwebInfo\Cobra5Sdk\Cobra5
+
+$cobra5 = new Cobra5($client);
 ```
 
 ## Return values
