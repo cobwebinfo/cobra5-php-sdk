@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Collection;
 use CobwebInfo\Cobra5Sdk\Entity\Category;
+use Illuminate\Support\Contracts\JsonableInterface;
+use Illuminate\Support\Contracts\ArrayableInterface;
 
-class Category extends Entity {
+class Category extends Entity implements ArrayableInterface, JsonableInterface {
 
   /**
    * The attributes that can be filled

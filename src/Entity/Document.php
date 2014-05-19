@@ -1,6 +1,9 @@
 <?php namespace CobwebInfo\Cobra5Sdk\Entity;
 
-class Document extends Entity {
+use Illuminate\Support\Contracts\JsonableInterface;
+use Illuminate\Support\Contracts\ArrayableInterface;
+
+class Document extends Entity implements ArrayableInterface, JsonableInterface {
 
   /**
    * The attributes that can be filled
