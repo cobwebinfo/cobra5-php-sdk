@@ -47,7 +47,7 @@ $client = new Cobra5SoapClient($soap, $auth);
 
 Finally, create a new instance of `Cobra5` and pass the `Cobra5SoapClient` object as the argument:
 ```php
-use CobwebInfo\Cobra5Sdk\Cobra5
+use CobwebInfo\Cobra5Sdk\Cobra5;
 
 $cobra5 = new Cobra5($client);
 ```
