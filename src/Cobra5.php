@@ -199,7 +199,19 @@ class Cobra5 implements Cobra5Interface {
   {
     $response = $this->client->getCategory($category_id, $store_id);
 
-    return new Category($response[0]);
+    if(count($response) == 1)
+    {
+      return new Category($response[0]);
+    }
+
+    $collection = new Collection;
+
+    foreach($response as $item)
+    {
+      $collection[] = new Category($item);
+    }
+
+    return $collection;
   }
 
   /**
