@@ -208,7 +208,10 @@ class Cobra5 implements Cobra5Interface {
 
     foreach($response as $item)
     {
-      $collection[] = new Category($item);
+      if($item['id'] !== $category_id)
+      {
+        $collection[] = new Category($item);
+      }
     }
 
     return $collection;
