@@ -12,6 +12,27 @@ abstract class Entity {
   protected $attributes = [];
 
   /**
+   * The entity's relations
+   *
+   * @var array
+   */
+  protected $relations = [];
+
+  /**
+   * The entities fillable attributes
+   *
+   * @var array
+   */
+  protected $fillable = [];
+
+  /**
+   * The entities hidden attributes
+   *
+   * @var array
+   */
+  protected $hidden = [];
+
+  /**
    * Fill the entity with an array of attributes.
    *
    * @param array $attributes
@@ -104,7 +125,16 @@ abstract class Entity {
    */
   public function toArray()
   {
-    return $this->attributes;
+    $attributes = array_diff_key($this->attributes, array_flip($this->hidden));
+
+    $relations = [];
+
+    foreach($this->relations as $key => $relation)
+    {
+      $relations[$key] = $relation->toArray();
+    }
+
+    return array_merge($attributes, $relations);
   }
 
   /**
