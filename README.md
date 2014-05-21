@@ -70,12 +70,12 @@ The `getStores()` method will return a `Illuminate\Support\Collection` of the da
 ```php
 $cobra5->getStore(9);
 ```
-The `getStore()` method will return a `CobwebInfo\Cobra5Sdq\Entity\Datastore` instance.
+The `getStore()` method will return a `CobwebInfo\Cobra5Sdk\Entity\Datastore` instance.
 
 ```php
 $cobra5->getStoreByName('BOP');
 ```
-The `getStoreByName()` method will return a `CobwebInfo\Cobra5Sdq\Entity\Datastore` instance.
+The `getStoreByName()` method will return a `CobwebInfo\Cobra5Sdk\Entity\Datastore` instance.
 
 ```php
 $cobra5->getDocuments();
@@ -85,12 +85,12 @@ The `getDocuments()` method will return a `Illuminate\Support\Collection` of the
 ```php
 $cobra5->getDocument(1444);
 ```
-The `getDocument()` method will return a `CobwebInfo\Cobra5Sdq\Entity\Document` instance.
+The `getDocument()` method will return a `CobwebInfo\Cobra5Sdk\Entity\Document` instance.
 
 ```php
 $cobra5->getLastEditedDocument();
 ```
-The `getLastEditedDocument()` method will return the last edited document in the system as a `CobwebInfo\Cobra5Sdq\Entity\Document` instance.
+The `getLastEditedDocument()` method will return the last edited document in the system as a `CobwebInfo\Cobra5Sdk\Entity\Document` instance.
 
 ```php
 $cobra5->getEditedDocuments('1388534400', '1391126400');
@@ -110,7 +110,7 @@ The `getDocumentsForCategory()` method will return a `Illuminate\Support\Collect
 ```php
 $cobra5->getCategory(1197);
 ```
-The `getCategory()` method will return a `CobwebInfo\Cobra5Sdq\Entity\Category` instance.
+The `getCategory()` method will return a `CobwebInfo\Cobra5Sdk\Entity\Category` instance.
 
 ```php
 $cobra5->getCategoriesForStore(9);
