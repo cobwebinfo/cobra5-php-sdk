@@ -23,7 +23,10 @@ class Document extends Entity implements ArrayableInterface, JsonableInterface {
     'api_last_update_time',
     'document_id',
     'publish_date',
-    'amended_date'
+    'amended_date',
+    'html',
+    'xml',
+    'pdf'
   ];
 
   /**
