@@ -35,25 +35,19 @@ class DatastoreTree extends AbstractTree implements Tree {
   {
     $datastores = $this->cobra5->getStores();
 
-    if(in_array('roots', $branches))
+    foreach($datastores as $datastore)
     {
-      foreach($datastores as $datastore)
-      {
-        $datastore = $this->hydrateRoots($datastore);
-      }
+      $datastore = $this->hydrateRoots($datastore);
     }
 
-    if(in_array('parents', $branches))
+    if(in_array('categories', $branches))
     {
       foreach($datastores as $datastore)
       {
         $datastore = $this->hydrateParents($datastore);
       }
-    }
 
-    if(in_array('children', $branches))
-    {
-      foreach($datastores as $datastore)
+     foreach($datastores as $datastore)
       {
         foreach($datastore->categories() as $category)
         {
@@ -86,18 +80,12 @@ class DatastoreTree extends AbstractTree implements Tree {
   {
     $datastore = $this->cobra5->getStore($id);
 
-    if(in_array('roots', $branches))
-    {
-      $datastore = $this->hydrateRoots($datastore);
-    }
+    $datastore = $this->hydrateRoots($datastore);
 
-    if(in_array('parents', $branches))
+    if(in_array('categories', $branches))
     {
       $datastore = $this->hydrateParents($datastore);
-    }
 
-    if(in_array('children', $branches))
-    {
       foreach($datastore->categories() as $category)
       {
         $category = $this->hydrateChildren($category);
