@@ -27,12 +27,21 @@ class CategoryTree extends AbstractTree implements Tree {
   /**
    * Create a tree of all branches
    *
+   * @param array $selected
    * @param array $branches
    * @return Illuminate\Support\Collection
    */
-  public function all(array $branches = [])
+  public function all(array $selected, array $branches = [])
   {
-    $datastores = $this->cobra5->getStores();
+    $results = $this->cobra5->getStores();
+
+    foreach($results as $result)
+    {
+      if(in_array($result->name, $selected))
+      {
+        $datastores[] = $result;
+      }
+    }
 
     foreach($datastores as $datastore)
     {

@@ -5,10 +5,11 @@ interface Tree {
   /**
    * Create a tree of all branches
    *
+   * @param array $selected
    * @param array $branches
    * @return Illuminate\Support\Collection
    */
-  public function all(array $branches = []);
+  public function all(array $selected, array $branches = []);
 
   /**
    * Create a tree of a single branch
