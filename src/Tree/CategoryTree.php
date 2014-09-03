@@ -35,6 +35,8 @@ class CategoryTree extends AbstractTree implements Tree {
   {
     $results = $this->cobra5->getStores();
 
+    $datastores = [];
+
     foreach($results as $result)
     {
       if(in_array($result->name, $selected))
