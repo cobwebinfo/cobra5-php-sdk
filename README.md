@@ -16,7 +16,7 @@ Add `cobwebinfo/cobra5-php-sdk` as a requirement to `composer.json`:
 ```json
 {
   "require": {
-    "cobwebinfo/cobra5-php-sdk": "1.*"
+    "cobwebinfo/cobra5-php-sdk": "1.0.*"
   }
 }
 ```
