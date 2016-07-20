@@ -22,7 +22,7 @@ class Cobra5SoapClientTest extends PHPUnit_Framework_TestCase {
   }
 
   /**
-   * @expectedException PHPUnit_Framework_Error
+   * @expectedException TypeError
    */
   public function testCobra5SoapClientRequiresSoapClient()
   {
@@ -30,7 +30,7 @@ class Cobra5SoapClientTest extends PHPUnit_Framework_TestCase {
   }
 
   /**
-   * @expectedException PHPUnit_Framework_Error
+   * @expectedException TypeError
    */
   public function testCobra5SoapClientRequiresSoapAuthenticationObject()
   {
