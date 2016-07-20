@@ -17,7 +17,7 @@ class Cobra5Test extends PHPUnit_Framework_TestCase {
   }
 
   /**
-   * @expectedException Exception
+   * @expectedException PHPUnit_Framework_Error
    */
   public function testCobra5RequiresCobra5InterfaceDependency()
   {
