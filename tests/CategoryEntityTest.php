@@ -17,7 +17,7 @@ class CategoryEntityTest extends PHPUnit_Framework_TestCase {
   }
 
   /**
-   * @expectedException PHPUnit_Framework_Error
+   * @expectedException TypeError
    */
   public function testAddChildOnlyAcceptsCategoryEntity()
   {
@@ -42,7 +42,7 @@ class CategoryEntityTest extends PHPUnit_Framework_TestCase {
   }
 
   /**
-   * @expectedException PHPUnit_Framework_Error
+   * @expectedException TypeError
    */
   public function testAddDocumentOnlyAcceptsDocumentEntity()
   {
