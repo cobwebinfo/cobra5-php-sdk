@@ -22,6 +22,9 @@ class CategoryEntityTest extends PHPUnit_Framework_TestCase {
   public function testAddChildOnlyAcceptsCategoryEntity()
   {
     $category = new Category;
+
+    $this->setExpectedException('Exception');
+
     $category->addChild('hello world');
   }
 
