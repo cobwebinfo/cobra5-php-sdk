@@ -1,11 +1,10 @@
 <?php namespace CobwebInfo\Cobra5Sdk\Entity;
 
+use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Support\Collection;
-use CobwebInfo\Cobra5Sdk\Entity\Category;
-use Illuminate\Support\Contracts\JsonableInterface;
-use Illuminate\Support\Contracts\ArrayableInterface;
 
-class Category extends Entity implements ArrayableInterface, JsonableInterface {
+class Category extends Entity implements Arrayable, Jsonable {
 
   /**
    * The attributes that can be filled

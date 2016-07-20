@@ -1,10 +1,10 @@
 <?php namespace CobwebInfo\Cobra5Sdk\Entity;
 
+use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Contracts\JsonableInterface;
-use Illuminate\Support\Contracts\ArrayableInterface;
 
-class Datastore extends Entity implements ArrayableInterface, JsonableInterface {
+class Datastore extends Entity implements Arrayable, Jsonable {
 
   /**
    * The attributes that can be filled
