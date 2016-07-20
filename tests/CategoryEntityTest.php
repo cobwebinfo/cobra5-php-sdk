@@ -21,11 +21,9 @@ class CategoryEntityTest extends PHPUnit_Framework_TestCase {
    */
   public function testAddChildOnlyAcceptsCategoryEntity()
   {
-
     $category = new Category;
 
     $category->addChild('hello world');
-
   }
 
   public function testHasChildrenReturnsBool()
