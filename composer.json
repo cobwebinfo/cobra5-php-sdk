@@ -1,18 +1,18 @@
 {
-    "name": "cobwebinfo/cobra5-php-sdk",
-    "license": "MIT",
-    "description": "PHP SDK for COBRA5",
-     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support" : "~5.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "4.8.*",
-        "mockery/mockery": "0.9.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "CobwebInfo\\Cobra5Sdk\\": "src"
-        }
+  "name": "cobwebinfo/cobra5-php-sdk",
+  "license": "MIT",
+  "description": "PHP SDK for COBRA5",
+  "require": {
+    "php": ">=5.4.0",
+    "illuminate/support": "~5.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.8.*",
+    "mockery/mockery": "0.9.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "CobwebInfo\\Cobra5Sdk\\": "src"
     }
+  }
 }
