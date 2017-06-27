@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e2f006fc-a83e-43ce-b1e1-cd90be1a2da5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/CategoryEntityTest.php" afterPath="$PROJECT_DIR$/tests/CategoryEntityTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Cobra5SoapClientTest.php" afterPath="$PROJECT_DIR$/tests/Cobra5SoapClientTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/DatastoreTest.php" afterPath="$PROJECT_DIR$/tests/DatastoreTest.php" />
     </list>
     <ignored path="cobra5-php-sdk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,11 +35,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoryEntityTest.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CategoryEntityTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/CategoryEntityTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+            <state relative-caret-position="615">
+              <caret line="43" column="47" lean-forward="false" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cobra5SoapClientTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Cobra5SoapClientTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatastoreTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/DatastoreTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="43" column="47" lean-forward="false" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -99,8 +121,6 @@
         <option value="$PROJECT_DIR$/src/Entity/Document.php" />
         <option value="$PROJECT_DIR$/phpunit.xml" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/tests/DatastoreTest.php" />
-        <option value="$PROJECT_DIR$/tests/Cobra5SoapClientTest.php" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Parameters/GroupedFilterParam.php" />
@@ -112,6 +132,8 @@
         <option value="$PROJECT_DIR$/tests/Cobra5Test.php" />
         <option value="$PROJECT_DIR$/src/Entity/Category.php" />
         <option value="$PROJECT_DIR$/tests/CategoryEntityTest.php" />
+        <option value="$PROJECT_DIR$/tests/Cobra5SoapClientTest.php" />
+        <option value="$PROJECT_DIR$/tests/DatastoreTest.php" />
       </list>
     </option>
   </component>
@@ -401,7 +423,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17744000" />
+    <option name="totallyTimeSpent" value="18110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
@@ -673,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/DatastoreTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/EntityTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -753,16 +768,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/CategoryEntityTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Cobra5SoapClientTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+        <state relative-caret-position="615">
+          <caret line="43" column="47" lean-forward="false" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -875,6 +882,22 @@
             <marker date="1498579938427" expanded="true" signature="267:2008" ph="..." />
             <marker date="1498579938427" expanded="true" signature="1932:2006" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Cobra5SoapClientTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/DatastoreTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="43" column="47" lean-forward="false" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>

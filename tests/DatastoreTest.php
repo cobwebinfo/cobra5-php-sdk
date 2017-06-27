@@ -11,7 +11,7 @@ class DatastoreEntityTest extends PHPUnit_Framework_TestCase {
   }
 
   /**
-   * @expectedException Exception
+   * @expectedException PHPUnit_Framework_Error
    */
   public function testAddRootOnlyAcceptsCategoryEntity()
   {
@@ -26,7 +26,7 @@ class DatastoreEntityTest extends PHPUnit_Framework_TestCase {
   }
 
   /**
-   * @expectedException Exception
+   * @expectedException PHPUnit_Framework_Error
    */
   public function testAddCategoriesOnlyAcceptsCategoryEntity()
   {
@@ -41,7 +41,7 @@ class DatastoreEntityTest extends PHPUnit_Framework_TestCase {
   }
 
   /**
-   * @expectedException Exception
+   * @expectedException PHPUnit_Framework_Error
    */
   public function testAddDocumentOnlyAcceptsDocumentEntity()
   {
