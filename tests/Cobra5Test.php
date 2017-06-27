@@ -79,6 +79,19 @@ class Cobra5Test extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('Illuminate\Support\Collection', $this->cobra5->getDocumentsForCategory(1));
     }
 
+    public function testFilterDocumentsByCategoryReturnsCollectionAndPaging()
+    {
+        $this->client->shouldReceive('filterDocumentsByCategory')->andReturn(['results' => [], 'paging' => []]);
+
+        $resp = $this->cobra5->filterDocumentsByCategory(
+            new \CobwebInfo\Cobra5Sdk\Parameters\GroupedFilterParam(),
+            new \CobwebInfo\Cobra5Sdk\Parameters\PagingParam()
+        );
+
+        $this->assertInstanceOf('Illuminate\Support\Collection', $resp['results']);
+        $this->assertInternalType('array', $resp['paging']);
+    }
+
     public function testGetCategoryReturnsCategoryEntity()
     {
         $this->client->shouldReceive('getCategory')->andReturn([0 => []]);

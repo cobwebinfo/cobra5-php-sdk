@@ -32,7 +32,7 @@ class PagingParam
      */
     public function setPage($page)
     {
-        $this->page = $page;
+        $this->page = (int) $page;
     }
 
     /**
@@ -48,7 +48,7 @@ class PagingParam
      */
     public function setTake($take)
     {
-        $this->take = $take;
+        $this->take = (int) $take;
     }
 
     /**
