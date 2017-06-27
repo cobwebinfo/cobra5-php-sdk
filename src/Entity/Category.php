@@ -1,7 +1,6 @@
 <?php namespace CobwebInfo\Cobra5Sdk\Entity;
 
 use Illuminate\Support\Collection;
-use CobwebInfo\Cobra5Sdk\Entity\Category;
 use Illuminate\Support\Contracts\JsonableInterface;
 use Illuminate\Support\Contracts\ArrayableInterface;
 
