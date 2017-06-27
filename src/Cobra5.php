@@ -1,5 +1,7 @@
 <?php namespace CobwebInfo\Cobra5Sdk;
 
+use CobwebInfo\Cobra5Sdk\Parameters\GroupedFilterParam;
+use CobwebInfo\Cobra5Sdk\Parameters\PagingParam;
 use Illuminate\Support\Collection;
 use CobwebInfo\Cobra5Sdk\Entity\Document;
 use CobwebInfo\Cobra5Sdk\Entity\Category;
@@ -187,6 +189,37 @@ class Cobra5 implements Cobra5Interface {
 
     return $collection;
   }
+
+    /**
+     * Gets the documents via a grouped category filter.
+     *
+     * @param GroupedFilterParam $filter
+     * @param PagingParam $paging
+     * @param null $store_id
+     * @param string $query_type
+     * @return array
+     */
+    public function filterDocumentsByCategory(
+        GroupedFilterParam $filter,
+        PagingParam $paging,
+        $store_id = null,
+        $query_type = 'and'
+    ) {
+        $response = $this->client->filterDocumentsByCategory(
+            $filter->toArray(),
+            $paging->toArray(),
+            $store_id,
+            $query_type
+        );
+        $collection = new Collection;
+        foreach ($response['results'] as $item) {
+            $collection[] = $item;
+        }
+        return [
+            'results' => $collection,
+            'paging' => $response['paging']
+        ];
+    }
 
   /**
    * Get a specific category by it's id
