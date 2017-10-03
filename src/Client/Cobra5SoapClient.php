@@ -329,4 +329,30 @@ class Cobra5SoapClient implements Cobra5Interface
 
         return $this->client->documentSearch($term, $start, $limit, $type);
     }
+
+    /**
+     * Get a single file from the API using its
+     * unique identifier.
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function getFile($id)
+    {
+        $this->setHeader();
+
+        return $this->client->getFile($id);
+    }
+
+    /**
+     * Get all files from the API.
+     *
+     * @return mixed
+     */
+    public function getFiles()
+    {
+        $this->setHeader();
+
+        return $this->client->getFiles();
+    }
 }
