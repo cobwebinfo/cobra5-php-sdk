@@ -329,5 +329,4 @@ class Cobra5SoapClient implements Cobra5Interface
 
         return $this->client->documentSearch($term, $start, $limit, $type);
     }
-
 }
