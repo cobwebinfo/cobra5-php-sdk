@@ -315,4 +315,19 @@ class Cobra5SoapClient implements Cobra5Interface
         return $this->client->documentSearch($term, $start, $limit, $type);
     }
 
+    /**
+     * Get paginated documents from the API
+     *
+     * @param null $store_id
+     * @param null $category_id
+     * @param array $paging
+     * @return mixed
+     */
+    public function getPagedDocuments($store_id = null, $category_id = null, $paging = array())
+    {
+        $this->setHeader();
+
+        return $this->client->getPagedDocuments($store_id, $category_id, $paging);
+    }
+
 }
