@@ -358,4 +358,29 @@ class Cobra5 implements Cobra5Interface {
             'paging' => $response['paging']
         );
     }
+
+    /**
+     * Get a single File by its unique identifier.
+     *
+     * @param $id
+     * @return Document
+     */
+    public function getFile($id)
+    {
+        return $this->client->getFile($id);
+    }
+    /**
+     * Get all files from the API.
+     *
+     * @return \Illuminate\Support\Collection
+     */
+    public function getFiles()
+    {
+        $response = $this->client->getFiles();
+        $collection = new Collection;
+        foreach ($response as $item) {
+            $collection[] = $item;
+        }
+        return $collection;
+    }
 }

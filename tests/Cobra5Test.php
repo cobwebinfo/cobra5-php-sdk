@@ -143,4 +143,15 @@ class Cobra5Test extends PHPUnit_Framework_TestCase
         ]);
         $this->assertInstanceOf('CobwebInfo\Cobra5Sdk\Entity\Document', ($this->cobra5->getPagedDocuments())['results'][0]);
     }
+
+    public function testGetFileReturnsExpected()
+    {
+        $this->client->shouldReceive('getFile')->andReturn([]);
+        $this->assertInternalType('array', $this->cobra5->getFile(1));
+    }
+    public function testGetFilesReturnsCollection()
+    {
+        $this->client->shouldReceive('getFiles')->andReturn([]);
+        $this->assertInstanceOf('Illuminate\Support\Collection', $this->cobra5->getFiles());
+    }
 }
