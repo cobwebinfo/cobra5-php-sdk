@@ -141,7 +141,10 @@ class Cobra5Test extends PHPUnit_Framework_TestCase
             ],
             'paging' => []
         ]);
-        $this->assertInstanceOf('CobwebInfo\Cobra5Sdk\Entity\Document', ($this->cobra5->getPagedDocuments())['results'][0]);
+
+        $response = $this->cobra5->getPagedDocuments();
+
+        $this->assertInstanceOf('CobwebInfo\Cobra5Sdk\Entity\Document', $response['results'][0]);
     }
 
     public function testGetFileReturnsExpected()
