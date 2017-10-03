@@ -55,6 +55,29 @@ class Cobra5Test extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('CobwebInfo\Cobra5Sdk\Entity\Document', $this->cobra5->getDocument(1));
     }
 
+    public function testGetPagedDocumentsReturnsCollectionAndPaging()
+    {
+        $this->client->shouldReceive('getPagedDocuments')->andReturn(['results' => [], 'paging' => []]);
+
+        $resp = $this->cobra5->getPagedDocuments(1,1, new \CobwebInfo\Cobra5Sdk\Parameters\PagingParam());
+
+        $this->assertInstanceOf('Illuminate\Support\Collection', $resp['results']);
+        $this->assertInternalType('array', $resp['paging']);
+    }
+
+    public function testGetPagedDocumentsReturnsDocumentEntity()
+    {
+        $this->client->shouldReceive('getPagedDocuments')->andReturn([
+            'results' => [
+                ['id' => 1]
+            ],
+            'paging' => []
+        ]);
+
+        $this->assertInstanceOf('CobwebInfo\Cobra5Sdk\Entity\Document', ($this->cobra5->getPagedDocuments())['results'][0]);
+    }
+
+
     public function testGetLastEditedDocumentReturnsDocumentEntity()
     {
         $this->client->shouldReceive('getLastEditedDocument')->andReturn([]);

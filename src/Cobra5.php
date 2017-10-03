@@ -101,6 +101,31 @@ class Cobra5 implements Cobra5Interface
         return $collection;
     }
 
+
+    /**
+     * Gets paginated list of documents
+     *
+     * @param null $store_id
+     * @param null $category_id
+     * @param PagingParam $paging
+     * @return array
+     */
+    public function getPagedDocuments($store_id = null, $category_id = null, PagingParam $paging)
+    {
+        $response = $this->client->getPagedDocuments($store_id, $category_id, $paging->toArray());
+
+        $collection = new Collection;
+
+        foreach ($response['results'] as $item) {
+            $collection[] = new Document($item);
+        }
+
+        return [
+            'results' => $collection,
+            'paging' => $response['paging']
+        ];
+    }
+
     /**
      * Get a single document by it's id
      *
