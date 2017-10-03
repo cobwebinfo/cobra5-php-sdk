@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2f006fc-a83e-43ce-b1e1-cd90be1a2da5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Client/Cobra5SoapClient.php" afterPath="$PROJECT_DIR$/src/Client/Cobra5SoapClient.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cobra5.php" afterPath="$PROJECT_DIR$/src/Cobra5.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Cobra5Test.php" afterPath="$PROJECT_DIR$/tests/Cobra5Test.php" />
     </list>
     <ignored path="cobra5-php-sdk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +27,8 @@
       <file leaf-file-name="Cobra5Test.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Cobra5Test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="144" column="5" lean-forward="false" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
+            <state relative-caret-position="215">
+              <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding>
                 <marker date="1507041592234" expanded="true" signature="3253:3404" ph="{...}" />
               </folding>
@@ -83,7 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Entity/Datastore.php" />
         <option value="$PROJECT_DIR$/src/Entity/Document.php" />
         <option value="$PROJECT_DIR$/phpunit.xml" />
@@ -101,6 +98,7 @@
         <option value="$PROJECT_DIR$/src/Client/Cobra5SoapClient.php" />
         <option value="$PROJECT_DIR$/src/Cobra5.php" />
         <option value="$PROJECT_DIR$/tests/Cobra5Test.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -304,7 +302,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18477000" />
+    <option name="totallyTimeSpent" value="18717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="0" />
@@ -516,13 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -754,10 +745,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Cobra5Test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="144" column="5" lean-forward="false" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
+        <state relative-caret-position="215">
+          <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding>
             <marker date="1507041592234" expanded="true" signature="3253:3404" ph="{...}" />
           </folding>
