@@ -9,8 +9,8 @@ class PagingParamTest extends PHPUnit_Framework_TestCase {
         $param = new PagingParam();
 
         $expected = [
-            'page' => 1,
-            'take' => 25
+            $this->getParamAsObject('page', 1),
+            $this->getParamAsObject('take', 25)
         ];
 
         $this->assertEquals($expected, $param->toArray());
@@ -23,8 +23,8 @@ class PagingParamTest extends PHPUnit_Framework_TestCase {
         $param->setPage(2);
 
         $expected = [
-            'page' => 2,
-            'take' => 25
+            $this->getParamAsObject('page', 2),
+            $this->getParamAsObject('take', 25)
         ];
 
         $this->assertEquals($expected, $param->toArray());
@@ -37,10 +37,9 @@ class PagingParamTest extends PHPUnit_Framework_TestCase {
         $param->setTake(50);
 
         $expected = [
-            'page' => 1,
-            'take' => 50
+            $this->getParamAsObject('page', 1),
+            $this->getParamAsObject('take', 50)
         ];
-
         $this->assertEquals($expected, $param->toArray());
     }
 
@@ -52,10 +51,19 @@ class PagingParamTest extends PHPUnit_Framework_TestCase {
         $param->setPage('3.3');
 
         $expected = [
-            'page' => 3,
-            'take' => 1
+            $this->getParamAsObject('page', 3),
+            $this->getParamAsObject('take', 1)
         ];
 
         $this->assertEquals($expected, $param->toArray());
+    }
+
+    protected function getParamAsObject($name, $value) {
+        $payload = new \StdClass();
+
+        $payload->key = $name;
+        $payload->value = $value;
+
+        return $payload;
     }
 }

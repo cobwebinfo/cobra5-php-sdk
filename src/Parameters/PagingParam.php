@@ -57,8 +57,22 @@ class PagingParam
     public function toArray()
     {
         return [
-            'page' => $this->getPage(),
-            'take' => $this->getTake()
+            $this->getParamAsObject('page', $this->getPage()),
+            $this->getParamAsObject('take', $this->getTake()),
         ];
+    }
+
+    /**
+     * @param $name
+     * @param $value
+     * @return \StdClass
+     */
+    protected function getParamAsObject(string $name, $value) {
+        $payload = new \StdClass();
+
+        $payload->key = $name;
+        $payload->value = $value;
+
+        return $payload;
     }
 }
