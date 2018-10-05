@@ -51,7 +51,7 @@ abstract class AbstractTree
     {
         $response = $this->cobra5->getCategory($category->id);
 
-        if (count($response) > 1) {
+        if (!is_null($response)) {
             return $response;
         }
     }
