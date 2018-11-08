@@ -1,5 +1,6 @@
 # COBRA5 PHP SDK
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5e7002b5deba43be88149231a8a5886c)](https://app.codacy.com/app/jr-cobweb/cobra5-php-sdk?utm_source=github.com&utm_medium=referral&utm_content=cobwebinfo/cobra5-php-sdk&utm_campaign=Badge_Grade_Settings)
 [![Build Status](https://travis-ci.org/cobwebinfo/cobra5-php-sdk.svg?branch=master)](https://travis-ci.org/cobwebinfo/cobra5-php-sdk)
 
 The COBRA5 API can be used to retrieve content from the [Cobweb Information Ltd](http://www.cobwebinfo.com) content API.
