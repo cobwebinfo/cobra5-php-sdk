@@ -1,5 +1,6 @@
 # COBRA5 PHP SDK
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5e7002b5deba43be88149231a8a5886c)](https://app.codacy.com/app/jr-cobweb/cobra5-php-sdk?utm_source=github.com&utm_medium=referral&utm_content=cobwebinfo/cobra5-php-sdk&utm_campaign=Badge_Grade_Settings)
 [![Build Status](https://travis-ci.org/cobwebinfo/cobra5-php-sdk.svg?branch=master)](https://travis-ci.org/cobwebinfo/cobra5-php-sdk)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4ffd7142c5f74784a7eabae6baafc7a7)](https://www.codacy.com/app/jr-cobweb/cobra5-php-sdk?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cobwebinfo/cobra5-php-sdk&amp;utm_campaign=Badge_Grade)
