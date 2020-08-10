@@ -131,4 +131,11 @@ interface Cobra5Interface
      */
     public function documentSearch($term, $start = 0, $limit = 10, $type = false);
 
+    /**
+     * Fetch all events from the API not just the current ones
+     *
+     * @return array
+     */
+    public function fetchAllEvents();
+
 }

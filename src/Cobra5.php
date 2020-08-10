@@ -381,4 +381,22 @@ class Cobra5 implements Cobra5Interface
 
         return $collection;
     }
+
+    /**
+     * Fetch ll events from the API
+     *
+     * @return Collection\
+     */
+    public function fetchAllEvents()
+    {
+        $collection = new Collection;
+
+        $response = $this->client->fetchAllEvents();
+
+        foreach ($response as $item) {
+            $collection[] = $item;
+        }
+
+        return $collection;
+    }
 }

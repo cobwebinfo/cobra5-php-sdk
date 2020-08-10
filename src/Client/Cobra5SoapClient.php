@@ -355,4 +355,11 @@ class Cobra5SoapClient implements Cobra5Interface
 
         return $this->client->getFiles();
     }
+
+    public function fetchAllEvents()
+    {
+        $this->setHeader();
+
+        return $this->client->fetchAllEvents();
+    }
 }
