@@ -1,6 +1,7 @@
 <?php namespace CobwebInfo\Cobra5Sdk\Entity;
 
 use Exception;
+use Illuminate\Support\Str;
 
 abstract class Entity
 {
@@ -97,7 +98,7 @@ abstract class Entity
      */
     protected function snakeCase($string)
     {
-        return snake_case($string);
+        return Str::snake($string);
     }
 
     /**
