@@ -25,6 +25,8 @@ class Document extends Entity implements Arrayable, Jsonable
         'document_id',
         'publish_date',
         'amended_date',
+        'evt_start_date',
+        'evt_end_date',
         'html',
         'xml',
         'pdf'
