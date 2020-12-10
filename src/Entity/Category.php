@@ -22,6 +22,8 @@ class Category extends Entity implements Arrayable, Jsonable
         'deleted',
         'api_last_update_time',
         'vyre_id',
+        'cms_id',
+        'is_legacy',
         'document_count'
     ];
 
