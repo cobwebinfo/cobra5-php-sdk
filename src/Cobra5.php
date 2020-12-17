@@ -244,13 +244,16 @@ class Cobra5 implements Cobra5Interface
     }
 
     /**
-     * Get a specific category by it's id
+     * Gets the children of a category (and optionally the
+     * category itself) by it's id
      *
-     * @param int $category_id
-     * @param int $store_id
-     * @return CobwebInfo\Cobra5Sdk\Entity\Category
+     * @param   int    $category_id
+     * @param   null   $store_id
+     * @param   false  $includeSelf
+     *
+     * @return array|Category|Collection
      */
-    public function getCategory($category_id, $store_id = null)
+    public function getCategory($category_id, $store_id = null, $includeSelf = false)
     {
         $response = $this->client->getCategory($category_id, $store_id);
 
@@ -261,7 +264,7 @@ class Cobra5 implements Cobra5Interface
         $collection = new Collection;
 
         foreach ($response as $item) {
-            if ($item['id'] !== (int)$category_id) {
+            if ($includeSelf || $item['id'] !== (int)$category_id) {
                 $collection[] = new Category($item);
             }
         }
