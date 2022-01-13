@@ -19,7 +19,8 @@ class Datastore extends Entity implements Arrayable, Jsonable
         'last_mod_date',
         'creation_date',
         'api_last_update_time',
-        'categories'
+        'categories',
+        'reference'
     ];
 
     /**
