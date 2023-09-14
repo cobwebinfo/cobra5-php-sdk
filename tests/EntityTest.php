@@ -1,19 +1,16 @@
 <?php
 
-class EntityTest extends PHPUnit_Framework_TestCase
+class EntityTest extends \PHPUnit\Framework\TestCase
 {
-
     public function testAttributeCanBeAccessedThroughClassProperty()
     {
         $entity = new EntityStub(['name' => 'Hello world']);
         $this->assertEquals('Hello world', $entity->name);
     }
 
-    /**
-     * @expectedException Exception
-     */
     public function testInvalidPropertyGetterCallThrowsException()
     {
+        $this->expectException(Exception::class);
         $entity = new EntityStub;
         $entity->i_dont_exist;
     }
@@ -25,20 +22,16 @@ class EntityTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('Hello world', $entity->name);
     }
 
-    /**
-     * @expectedException Exception
-     */
     public function testOnlyFillableAttributesCanBeFilled()
     {
+        $this->expectException(Exception::class);
         $entity = new EntityStub(['rogue' => 'im_not_allowed']);
         $entity->rogue;
     }
 
-    /**
-     * @expectedException Exception
-     */
     public function testOnlyFillabelAttribtutesCanBeDynamicallySet()
     {
+        $this->expectException(Exception::class);
         $entity = new EntityStub;
         $entity->rogue = 'im_not_allowed';
     }
@@ -66,5 +59,4 @@ class EntityTest extends PHPUnit_Framework_TestCase
         $entity = new EntityStub(['name' => 'Hello world']);
         $this->assertEquals('{"name":"Hello world"}', (string)$entity);
     }
-
 }

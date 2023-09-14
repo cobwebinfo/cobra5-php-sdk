@@ -2,20 +2,18 @@
 
 use CobwebInfo\Cobra5Sdk\Entity\Datastore;
 
-class DatastoreEntityTest extends PHPUnit_Framework_TestCase
+class DatastoreTest extends \PHPUnit\Framework\TestCase
 {
-
     public function testRootsMethodReturnsCollection()
     {
         $datastore = new Datastore;
         $this->assertInstanceOf('Illuminate\Support\Collection', $datastore->roots());
     }
 
-    /**
-     * @expectedException TypeError
-     */
     public function testAddRootOnlyAcceptsCategoryEntity()
     {
+        $this->expectException(TypeError::class);
+
         $datastore = new Datastore;
         $datastore->addRoot('hello world');
     }
@@ -26,11 +24,10 @@ class DatastoreEntityTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('Illuminate\Support\Collection', $datastore->categories());
     }
 
-    /**
-     * @expectedException TypeError
-     */
     public function testAddCategoriesOnlyAcceptsCategoryEntity()
     {
+        $this->expectException(TypeError::class);
+
         $datastore = new Datastore;
         $datastore->addCategory('hello world');
     }
@@ -41,12 +38,12 @@ class DatastoreEntityTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('Illuminate\Support\Collection', $datastore->documents());
     }
 
-    /**
-     * @expectedException TypeError
-     */
     public function testAddDocumentOnlyAcceptsDocumentEntity()
     {
         $datastore = new Datastore;
+
+        $this->expectException(TypeError::class);
+
         $datastore->addDocument('hello world');
     }
 

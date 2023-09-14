@@ -1,0 +1,13 @@
+# Config based upon: https://medium.com/swlh/laravel-with-docker-compose-de2190569084
+# Access using: localhost:8084 for linux, or the 'docker-machine ip' for windows
+version: "3.4"
+services:
+    app:
+        volumes:
+            - .:/var/www/
+        working_dir: /var/www/
+        build:
+            context: docker
+            dockerfile: Dockerfile
+        environment:
+            PHP_IDE_CONFIG: "serverName=docker-server"

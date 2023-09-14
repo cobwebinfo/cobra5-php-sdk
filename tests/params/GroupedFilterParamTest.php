@@ -2,7 +2,7 @@
 
 use CobwebInfo\Cobra5Sdk\Parameters\GroupedFilterParam;
 
-class GroupedFilterParamTest extends PHPUnit_Framework_TestCase {
+class GroupedFilterParamTest extends \PHPUnit\Framework\TestCase {
 
     public function testCanAddGroup()
     {

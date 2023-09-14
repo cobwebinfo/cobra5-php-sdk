@@ -1,27 +1,30 @@
 <?php
 
+use CobwebInfo\Cobra5Sdk\Client\Cobra5SoapClient;
 use Mockery as m;
 use CobwebInfo\Cobra5Sdk\Cobra5;
 
-class Cobra5Test extends PHPUnit_Framework_TestCase
+class Cobra5Test extends \PHPUnit\Framework\TestCase
 {
 
-    public function setUp()
+    public function setUp(): void
     {
-        $this->client = m::mock('CobwebInfo\Cobra5Sdk\Client\Cobra5SoapClient');
+        $this->client = m::mock(Cobra5SoapClient::class);
         $this->cobra5 = new Cobra5($this->client);
+
+        parent::setUp();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         m::close();
+        parent::tearDown();
     }
 
-    /**
-     * @expectedException TypeError
-     */
     public function testCobra5RequiresCobra5InterfaceDependency()
     {
+        $this->expectException(TypeError::class);
+
         $cobra5 = new Cobra5(new stdClass);
     }
 
@@ -58,7 +61,7 @@ class Cobra5Test extends PHPUnit_Framework_TestCase
     public function testGetFileReturnsExpected()
     {
         $this->client->shouldReceive('getFile')->andReturn([]);
-        $this->assertInternalType('array', $this->cobra5->getFile(1));
+        $this->assertIsArray($this->cobra5->getFile(1));
     }
 
     public function testGetFilesReturnsCollection()
@@ -75,7 +78,7 @@ class Cobra5Test extends PHPUnit_Framework_TestCase
         $resp = $this->cobra5->getPagedDocuments(1,1, new \CobwebInfo\Cobra5Sdk\Parameters\PagingParam());
 
         $this->assertInstanceOf('Illuminate\Support\Collection', $resp['results']);
-        $this->assertInternalType('array', $resp['paging']);
+        $this->assertIsArray($resp['paging']);
     }
 
     public function testGetPagedDocumentsReturnsDocumentEntity()
@@ -127,7 +130,7 @@ class Cobra5Test extends PHPUnit_Framework_TestCase
         );
 
         $this->assertInstanceOf('Illuminate\Support\Collection', $resp['results']);
-        $this->assertInternalType('array', $resp['paging']);
+        $this->assertIsArray($resp['paging']);
     }
 
     public function testGetCategoryReturnsCategoryEntity()

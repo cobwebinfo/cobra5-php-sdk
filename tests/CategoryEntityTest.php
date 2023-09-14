@@ -1,53 +1,50 @@
 <?php
 
 use CobwebInfo\Cobra5Sdk\Entity\Category;
+use PHPUnit\Framework\TestCase;
 
-class CategoryEntityTest extends PHPUnit_Framework_TestCase {
+class CategoryEntityTest extends TestCase {
 
-  public function testIsDeletedReturnsBoolean()
-  {
-    $category = new Category(['deleted' => 1]);
-    $this->assertTrue($category->isDeleted());
-  }
+    public function testIsDeletedReturnsBoolean()
+    {
+        $category = new Category(['deleted' => 1]);
+        $this->assertTrue($category->isDeleted());
+    }
 
-  public function testChildrenMethodReturnsCollection()
-  {
-    $category = new Category;
-    $this->assertInstanceOf('Illuminate\Support\Collection', $category->children());
-  }
+    public function testChildrenMethodReturnsCollection()
+    {
+        $category = new Category;
+        $this->assertInstanceOf('Illuminate\Support\Collection', $category->children());
+    }
 
-  /**
-   * @expectedException TypeError
-   */
-  public function testAddChildOnlyAcceptsCategoryEntity()
-  {
-    $category = new Category;
+    public function testAddChildOnlyAcceptsCategoryEntity()
+    {
+        $category = new Category;
 
-    $category->addChild('hello world');
-  }
+        $this->expectException(TypeError::class);
 
-  public function testHasChildrenReturnsBool()
-  {
-    $category = new Category;
-    $this->assertFalse($category->hasChildren());
-    $child = new Category(['id' => 1]);
-    $category->addChild($child);
-    $this->assertTrue($category->hasChildren());
-  }
+        $category->addChild('hello world');
+    }
 
-  public function testDocumentsMethodReturnsCollection()
-  {
-    $category = new Category;
-    $this->assertInstanceOf('Illuminate\Support\Collection', $category->documents());
-  }
+    public function testHasChildrenReturnsBool()
+    {
+        $category = new Category;
+        $this->assertFalse($category->hasChildren());
+        $child = new Category(['id' => 1]);
+        $category->addChild($child);
+        $this->assertTrue($category->hasChildren());
+    }
 
-  /**
-   * @expectedException TypeError
-   */
-  public function testAddDocumentOnlyAcceptsDocumentEntity()
-  {
-    $category = new Category;
-    $category->addDocument('hello world');
-  }
+    public function testDocumentsMethodReturnsCollection()
+    {
+        $category = new Category;
+        $this->assertInstanceOf('Illuminate\Support\Collection', $category->documents());
+    }
 
+    public function testAddDocumentOnlyAcceptsDocumentEntity()
+    {
+        $category = new Category;
+        $this->expectException(TypeError::class);
+        $category->addDocument('hello world');
+    }
 }

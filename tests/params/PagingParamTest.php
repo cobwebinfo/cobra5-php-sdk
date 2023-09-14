@@ -2,7 +2,7 @@
 
 use CobwebInfo\Cobra5Sdk\Parameters\PagingParam;
 
-class PagingParamTest extends PHPUnit_Framework_TestCase {
+class PagingParamTest extends \PHPUnit\Framework\TestCase {
 
     public function testDefaults()
     {

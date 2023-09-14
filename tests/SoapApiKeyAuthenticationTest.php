@@ -2,7 +2,7 @@
 
 use CobwebInfo\Cobra5Sdk\Authentication\SoapApiKeyAuthentication;
 
-class SoapApiKeyAuthenticationTest extends PHPUnit_Framework_TestCase
+class SoapApiKeyAuthenticationTest extends \PHPUnit\Framework\TestCase
 {
 
     public function testGettingValuesFromObject()
