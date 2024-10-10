@@ -1,5 +1,7 @@
 <?php
 
+namespace Support;
+
 use CobwebInfo\Cobra5Sdk\Entity\Entity;
 
 class EntityStub extends Entity

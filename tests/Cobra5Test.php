@@ -6,6 +6,8 @@ use CobwebInfo\Cobra5Sdk\Cobra5;
 
 class Cobra5Test extends \PHPUnit\Framework\TestCase
 {
+    private $cobra5;
+    private $client;
 
     public function setUp(): void
     {

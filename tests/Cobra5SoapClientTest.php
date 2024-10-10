@@ -5,6 +5,9 @@ use CobwebInfo\Cobra5Sdk\Client\Cobra5SoapClient;
 
 class Cobra5SoapClientTest extends \PHPUnit\Framework\TestCase
 {
+    private $auth;
+    private $soap;
+    private $cobra5;
 
     public function setUp(): void
     {

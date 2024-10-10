@@ -1,5 +1,7 @@
 <?php
 
+use Support\EntityStub;
+
 class EntityTest extends \PHPUnit\Framework\TestCase
 {
     public function testAttributeCanBeAccessedThroughClassProperty()

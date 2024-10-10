@@ -7,6 +7,7 @@
     <testsuites>
         <testsuite name="COBRA5 PHP SDK Test Suite">
             <directory suffix=".php">tests</directory>
+            <exclude>tests/Support</exclude>
         </testsuite>
     </testsuites>
 </phpunit>
